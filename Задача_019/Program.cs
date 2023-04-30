@@ -19,6 +19,12 @@ string Palindrom(int num)
     }
     arrayB = Enumerable.Reverse(arrayA).ToArray();
 
+    // Переворот массива А вручную
+    // for (int i = 0; i<index; i++)
+    // {
+    //     arrayB[i] = arrayA[index-i-1];
+    // }
+
     for  (int i = 0; i < index; i++)
     {
         if (arrayA[i] != arrayB[i])
