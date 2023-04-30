@@ -17,13 +17,13 @@ string Palindrom(int num)
         arrayA[i] = num % 10;
         num/=10;
     }
-    arrayB = Enumerable.Reverse(arrayA).ToArray();
+    // arrayB = Enumerable.Reverse(arrayA).ToArray();
 
     // Переворот массива А вручную
-    // for (int i = 0; i<index; i++)
-    // {
-    //     arrayB[i] = arrayA[index-i-1];
-    // }
+    for (int i = 0; i<index; i++)
+    {
+        arrayB[i] = arrayA[index-i-1];
+    }
 
     for  (int i = 0; i < index; i++)
     {
