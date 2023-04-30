@@ -39,9 +39,9 @@ string Palindrom(int num)
 
 
 Console.Write("Введите пятизначное число: ");
-int n = Convert.ToInt32(Console.ReadLine());
 try
 {
+    int n = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine(Palindrom(n));
 }
 catch
