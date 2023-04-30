@@ -2,42 +2,21 @@
 
 string Palindrom(int num)
 {
-    int num_isp=num;
     string result = "да";
-    int index = 0;
-    
-    while (num_isp>0)
+    int numReverse = 0;
+    int num_isp = num;
+    while (num_isp > 0)
     {
-        num_isp/=10;
-        index++;
+        numReverse = numReverse * 10 + num_isp % 10;
+        num_isp /= 10;
     }
-    
-    int[] arrayA = new int[index];
-    int[] arrayB = new int[index];
-
-    for (int i = 0; i < index; i++)
+    if (numReverse != num)
     {
-        arrayA[i] = num % 10;
-        num/=10;
-    }
-    // arrayB = Enumerable.Reverse(arrayA).ToArray();
-
-    // Переворот массива А вручную
-    for (int i = 0; i<index; i++)
-    {
-        arrayB[i] = arrayA[index-i-1];
-    }
-
-    for  (int i = 0; i < index; i++)
-    {
-        if (arrayA[i] != arrayB[i])
-        {
-            result = "нет";
-            break;
-        }
+        result = "нет";
     }
     return result;
 }
+
 
 
 
