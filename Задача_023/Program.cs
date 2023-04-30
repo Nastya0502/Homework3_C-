@@ -7,12 +7,10 @@
 
 string Cube(int n)
 {
-    int index = 1;
     string result = "";
-    while (index < n)
+    for (int i =1; i < n; i++)
     {
-        result += Convert.ToString(Math.Pow(index, 3)) + ", ";
-        index++;
+        result += Convert.ToString(Math.Pow(i, 3)) + ", ";
     }
     result += Convert.ToString(Math.Pow(n, 3));
     return result;
